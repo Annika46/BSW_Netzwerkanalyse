@@ -1,0 +1,46 @@
+# Codebuch für die Netzwerkanalyse BSW
+
+## Inhalt
+- **edges.csv:** Edgelist
+- **nodes.csv:** Nodelist
+- **codebook.md:** Codierung der Datensätze
+
+---
+
+## Ursprung und Datenerhebung
+Die Daten wurden basierend auf öffentlich zugänglichen Informationen (z. B. offizielle Webseite des BSW, Medienberichte) erhoben.  
+Die Erhebung erfolgte im Januar 2025 und basiert auf der Analyse der Verbindungen und Rollen innerhalb des Parteivorstands.  
+
+Das Netzwerk ist ein gerichtetes one-mode Akteursnetzwerk. Es wurden zwei Hauptbeziehungen analysiert:
+1. **Organisatorische Zusammenarbeit (relation = 1):**  
+   Zusammenarbeit im Parteivorstand, wie gemeinsame Projekte oder öffentliche Auftritte.
+2. **Kommunikationsnetzwerk (relation = 2):**  
+   Häufige öffentliche Interaktionen, gemeinsame Statements oder Medienauftritte.
+
+| Attribut   | Beschreibung                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| `id`       | Eindeutige Codierung der Beziehung. Codiert von 1 bis n.                    |
+| `from`     | Initiierender Knoten: Der Akteur, der die Verbindung initiiert (z. B. Kommunikation). |
+| `to`       | Zielknoten: Der Akteur, mit dem eine Beziehung besteht.                     |
+| `weight`   | Gewichtung der Beziehung:                                                   |
+|            | - **3:** Sehr starke Beziehung (z. B. engste Zusammenarbeit).               |
+|            | - **2:** Moderate Beziehung (z. B. gelegentliche Zusammenarbeit).           |
+|            | - **1:** Schwache Beziehung (z. B. seltene Interaktion).                    |
+| `relation` | Beziehungstyp:                                                             |
+|            | - **1:** Organisatorische Zusammenarbeit                                    |
+|            | - **2:** Kommunikation                                                     |
+
+---
+
+## **NODE-Attribute**
+
+| Attribut      | Beschreibung                                                              |
+|---------------|---------------------------------------------------------------------------|
+| `id`          | Identische ID wie aus der Edgelist zur Identifikation der Knoten.        |
+| `name`        | Vollständiger Name des Akteurs.                                          |
+| `role`        | Funktion innerhalb des Parteivorstands.                                  |
+| `sex`         | Geschlecht des Akteurs:                                                 |
+|               | - **1:** Weiblich                                                        |
+|               | - **2:** Männlich                                                        |
+| `region`      | Regionale Zugehörigkeit (z. B. Bundesland, falls bekannt).               |
+| `connections` | Anzahl der Verbindungen des Akteurs (Degree).     
