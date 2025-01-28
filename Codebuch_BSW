@@ -16,31 +16,43 @@ Das Netzwerk ist ein gerichtetes one-mode Akteursnetzwerk. Es wurden zwei Hauptb
    Zusammenarbeit im Parteivorstand, wie gemeinsame Projekte oder öffentliche Auftritte.
 2. **Kommunikationsnetzwerk (relation = 2):**  
    Häufige öffentliche Interaktionen, gemeinsame Statements oder Medienauftritte.
+# Codebuch
 
-| Attribut   | Beschreibung                                                                 |
-|------------|-----------------------------------------------------------------------------|
-| `id`       | Eindeutige Codierung der Beziehung. Codiert von 1 bis n.                    |
-| `from`     | Initiierender Knoten: Der Akteur, der die Verbindung initiiert (z. B. Kommunikation). |
-| `to`       | Zielknoten: Der Akteur, mit dem eine Beziehung besteht.                     |
-| `weight`   | Gewichtung der Beziehung:                                                   |
-|            | - **3:** Sehr starke Beziehung (z. B. engste Zusammenarbeit).               |
-|            | - **2:** Moderate Beziehung (z. B. gelegentliche Zusammenarbeit).           |
-|            | - **1:** Schwache Beziehung (z. B. seltene Interaktion).                    |
-| `relation` | Beziehungstyp:                                                             |
-|            | - **1:** Organisatorische Zusammenarbeit                                    |
-|            | - **2:** Kommunikation                                                     |
+## EDGE-Attribute
+
+| **Attribut** | **Beschreibung** |
+| --- | --- |
+| **id** | Eindeutige Codierung der Beziehung. Wird von 1 bis n vergeben. |
+| **from** | Initiierender Knoten: Der Akteur, der die Beziehung initiiert (z. B. Kommunikation oder Kooperation). |
+| **to** | Zielknoten: Der Akteur, mit dem die Beziehung besteht. |
+| **weight** | Gewichtung der Beziehung, die die Intensität der Verbindung beschreibt: |
+|  | **3** = Sehr starke Beziehung (z. B. enge Zusammenarbeit, ständiger Austausch). |
+|  | **2** = Moderate Beziehung (z. B. gelegentliche Zusammenarbeit, sporadische Interaktionen). |
+|  | **1** = Schwache Beziehung (z. B. seltene Interaktion, formelle Verbindung). |
+| **age_real** | Alter des Akteurs in natürlichen Zahlen (z. B. 34 Jahre). |
+| **relation** | Art der Verbindung bzw. Beziehungstyp: |
+|  | **1** = Arbeitsbeziehung (z. B. Kollegen, berufliche Interaktionen). |
+|  | **2** = Freunde/Familie (persönliche Beziehungen, z. B. enge Freunde oder Familienangehörige). |
+|  | **3** = Mitglied (z. B. Mitglied einer Organisation oder Partei). |
+|  | **4** = Ehemaliges Mitglied (z. B. jemand, der nicht mehr aktiv Mitglied einer Organisation ist). |
+|  | **5** = Geldgeber/Investor/Sponsor (z. B. finanzielle Unterstützung oder Sponsoring). |
 
 ---
 
-## **NODE-Attribute**
+## NODE-Attribute
 
-| Attribut      | Beschreibung                                                              |
-|---------------|---------------------------------------------------------------------------|
-| `id`          | Identische ID wie aus der Edgelist zur Identifikation der Knoten.        |
-| `name`        | Vollständiger Name des Akteurs.                                          |
-| `role`        | Funktion innerhalb des Parteivorstands.                                  |
-| `sex`         | Geschlecht des Akteurs:                                                 |
-|               | - **1:** Weiblich                                                        |
-|               | - **2:** Männlich                                                        |
-| `region`      | Regionale Zugehörigkeit (z. B. Bundesland, falls bekannt).               |
-| `connections` | Anzahl der Verbindungen des Akteurs (Degree).     
+| **Attribut** | **Beschreibung** |
+| --- | --- |
+| **id** | Identische ID wie aus der Edgelist zur eindeutigen Identifikation der Knoten. |
+| **name** | Vollständiger Name des Akteurs (z. B. „Max Mustermann“). |
+| **role** | Funktion des Akteurs innerhalb des Parteivorstands oder der Organisation. |
+| **sex** | Geschlecht des Akteurs: |
+|  | **1** = Weiblich |
+|  | **2** = Männlich |
+| **region** | Regionale Zugehörigkeit des Akteurs (z. B. Bundesland, Stadt, Land, wenn bekannt). |
+| **Funktion** | Typ der Institution oder Organisation, in der der Akteur tätig ist: |
+|  | **1** = Institution (z. B. staatliche Einrichtungen, Universitäten). |
+|  | **2** = Organisation (z. B. NGOs, Vereine). |
+|  | **3** = Partei (z. B. politische Partei). |
+|  | **4** = Wirtschaftliches Unternehmen (z. B. Unternehmen, Firmen). |
+|  | **5** = NGO (Nichtregierungsorganisation, z. B. Umweltschutzgruppen, Hilfsorganisationen). |
