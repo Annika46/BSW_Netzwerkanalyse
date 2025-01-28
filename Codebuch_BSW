@@ -26,9 +26,10 @@ Das Netzwerk ist ein gerichtetes one-mode Akteursnetzwerk. Es wurden zwei Hauptb
 | **from** | Initiierender Knoten: Der Akteur, der die Beziehung initiiert (z. B. Kommunikation oder Kooperation). |
 | **to** | Zielknoten: Der Akteur, mit dem die Beziehung besteht. |
 | **weight** | Gewichtung der Beziehung, die die Intensität der Verbindung beschreibt: |
-|  | **3** = Sehr starke Beziehung (z. B. enge Zusammenarbeit, ständiger Austausch). |
-|  | **2** = Moderate Beziehung (z. B. gelegentliche Zusammenarbeit, sporadische Interaktionen). |
-|  | **1** = Schwache Beziehung (z. B. seltene Interaktion, formelle Verbindung). |
+|  | **1** = Ehemalige Beziehung (z. B. eine nicht mehr aktive Verbindung). |
+|  | **2** = Schwache Beziehung (z. B. seltene Interaktion, formelle Verbindung). |
+|  | **3** = Moderate Beziehung (z. B. gelegentliche Zusammenarbeit, sporadische Interaktionen). |
+|  | **4** = Sehr starke Beziehung (z. B. enge Zusammenarbeit, ständiger Austausch). |
 | **age_real** | Alter des Akteurs in natürlichen Zahlen (z. B. 34 Jahre). |
 | **relation** | Art der Verbindung bzw. Beziehungstyp: |
 |  | **1** = Arbeitsbeziehung (z. B. Kollegen, berufliche Interaktionen). |
