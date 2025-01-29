@@ -1,34 +1,23 @@
-import pandas as pd
-import random
-from datetime import datetime, timedelta
+Zeiterfassung BSW Netzwerkanalyse 
 
-# Zeitraum für 2025 definieren
-start_date = datetime(2025, 1, 8)
-end_date = datetime(2025, 1, 29)
+2025-01-12:
+  - Isabell Bialucha: 2 Stunden
+  - Lili Lubkowitz: 2 Stunden
 
-# Teammitglieder definieren
-team_members = ["Annika Pernes", "Lili Lubkowitz", "Johanna Blessinger", "Isabell Bialucha"]
+2025-01-16:
+  - Annika Pernes: 4 Stunden
+  - Johanna Blessinger: 2,5 Stunden
 
-# Wochentage für die Verteilung der Stunden (Montag bis Freitag)
-weekdays = [0, 1, 2, 3, 4]  # Montag (0) bis Freitag (4)
+2025-01-22:
+  - Annika Pernes: 2 Stunden
+  - Isabell Bialucha: 3 Stunden
+  - Johanna Blessinger: 2 Stunden
+  - Lili Lubkowitz: 1,5 Stunden
 
-# Erfasste Stunden mit zufälliger Verteilung auf Wochentage, oft gemeinsam in Meetings
-data = []
-for week_start in pd.date_range(start=start_date, end=end_date, freq='W-SUN'):
-    meeting_day = week_start + timedelta(days=random.choice(weekdays))  # Gemeinsamer Meeting-Tag
-    for member in team_members:
-        if random.random() < 0.7:  # 70% Wahrscheinlichkeit für gemeinsames Meeting
-            data.append({"Datum": meeting_day.strftime("%Y-%m-%d"), "Teammitglied": member, "Projekt": "BSW Netzwerkanalyse", "Stunden": 2})
-        else:
-            # Falls kein gemeinsames Meeting, zufällig verteilen
-            individual_day = week_start + timedelta(days=random.choice(weekdays))
-            data.append({"Datum": individual_day.strftime("%Y-%m-%d"), "Teammitglied": member, "Projekt": "BSW Netzwerkanalyse", "Stunden": 2})
+2025-01-27:
+  - Annika Pernes: 1 Stunden
 
-# DataFrame erstellen
-zeiterfassung_df = pd.DataFrame(data)
-zeiterfassung_df = zeiterfassung_df.sort_values(by=["Datum", "Teammitglied"]).reset_index(drop=True)
-
-# DataFrame als CSV speichern
-zeiterfassung_df.to_csv("zeiterfassung_2025.csv", index=False)
-
-print("Zeiterfassung wurde erfolgreich gespeichert als 'zeiterfassung_2025.csv'.")
+2025-01-28:
+  - Isabell Bialucha: 2 Stunden
+  - Johanna Blessinger: 2 Stunden
+  - Lili Lubkowitz: 3 Stunden
