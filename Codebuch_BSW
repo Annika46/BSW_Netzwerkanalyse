@@ -53,7 +53,7 @@ Das Netzwerk ist ein gerichtetes one-mode Akteursnetzwerk. Es wurden zwei Hauptb
 | **region** | Regionale Zugehörigkeit des Akteurs (z. B. Bundesland, Stadt, Land, wenn bekannt). |
 | **Funktion** | Typ der Institution oder Organisation, in der der Akteur tätig ist: |
 |  | **1** = Institution (z. B. staatliche Einrichtungen, Universitäten). |
-|  | **2** = Organisation (z. B. NGOs, Vereine). |
+|  | **2** = Organisation (z. B. Vereine). |
 |  | **3** = Partei (z. B. politische Partei). |
 |  | **4** = Wirtschaftliches Unternehmen (z. B. Unternehmen, Firmen). |
 |  | **5** = NGO (Nichtregierungsorganisation, z. B. Umweltschutzgruppen, Hilfsorganisationen). |
